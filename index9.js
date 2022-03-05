@@ -10,7 +10,7 @@ let intervalGame;
 let gameOver = false;
 
 function clickOnBallon(bubble) {
-  if (!gameOver && bubble.resultat > 125) {
+  if (!gameOver && (bubble.resultat < 65&&bubble.resultat>0)) {
     const audio = new Audio();
     audio.src = "m.mp3";
     audio.play();
@@ -19,13 +19,13 @@ function clickOnBallon(bubble) {
     counter++;
     counterDisplay.textContent = counter;
 
-    if (counter >= 10) {
+    if (counter >= 20) {
       // Le chiffre de ballon a atteindre doit être dans une constante au dessus
       gameOver = true;
       text.innerHTML = `
       <h3>Gagné</h3>
       <ul>
-      <li><a  class ="wait"href="./index9.html">niveau 9 </a></li>
+      <li><a  class ="wait"href="./index10.html">niveau 10</a></li>
       <li><a href ="https://www.google.fr/">quitter</a><li>
       </ul>
      `;
@@ -62,9 +62,9 @@ const bubbleMaker = () => {
   bubble.style.top = Math.random() * 100 + 50 + "%";
   bubble.style.left = Math.random() * 100 + "%";
   // bubble.textContent = border.toFixed(0);
- let number2 = ((Math.random() * 100).toFixed(0))
-  bubble.textContent = `${border}+${number2}`;
-  bubble.resultat = parseInt(border)+parseInt(number2)
+ let number2 = ((Math.random() * 50).toFixed(0))
+  bubble.textContent = `${border}-${number2}`;
+  bubble.resultat = parseInt(border)-parseInt(number2)
   // bubble.style.color = "white";
   bubble.style.borderRadius = border + "%";
 
@@ -105,7 +105,7 @@ let gameLost = function () {
     <h3>Game Over</h3>
     <p>Rejouer</p>
     <ul>
-    <li><a href="./index8.html">oui</a></li>
+    <li><a href="./index9.html">oui</a></li>
     <li><a href ="https://www.google.fr/">Non</a><li>
     </ul>
    `;

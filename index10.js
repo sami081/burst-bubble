@@ -19,13 +19,14 @@ function clickOnBallon(bubble) {
     counter++;
     counterDisplay.textContent = counter;
 
-    if (counter >= 10) {
+    if (counter >= 20) {
       // Le chiffre de ballon a atteindre doit être dans une constante au dessus
       gameOver = true;
       text.innerHTML = `
       <h3>Gagné</h3>
+      <p> Vous avez fini tous les niveaux disponible de bubble game 
       <ul>
-      <li><a  class ="wait"href="./index9.html">niveau 9 </a></li>
+      <li><a  class ="wait"href="./index.html">Jouer à un autre jeux</a></li>
       <li><a href ="https://www.google.fr/">quitter</a><li>
       </ul>
      `;
@@ -53,7 +54,7 @@ const bubbleMaker = () => {
   document.body.appendChild(bubble);
   //création dune constante qui permet d avoir une taille aleatoire entre 100 et 300
   let size = Math.random() * 200 + 100;
-  let border = ((Math.random() * 100).toFixed(0));
+  let border = ((Math.random() * 20).toFixed(0));
   // injection du style a la const bubble
   bubble.style.height = size + "px";
   bubble.style.width = size + "px";
@@ -62,9 +63,9 @@ const bubbleMaker = () => {
   bubble.style.top = Math.random() * 100 + 50 + "%";
   bubble.style.left = Math.random() * 100 + "%";
   // bubble.textContent = border.toFixed(0);
- let number2 = ((Math.random() * 100).toFixed(0))
-  bubble.textContent = `${border}+${number2}`;
-  bubble.resultat = parseInt(border)+parseInt(number2)
+ let number2 = ((Math.random() * 20).toFixed(0))
+  bubble.textContent = `${border}*${number2}`;
+  bubble.resultat = parseInt(border)*parseInt(number2)
   // bubble.style.color = "white";
   bubble.style.borderRadius = border + "%";
 
@@ -105,7 +106,7 @@ let gameLost = function () {
     <h3>Game Over</h3>
     <p>Rejouer</p>
     <ul>
-    <li><a href="./index8.html">oui</a></li>
+    <li><a href="./index10.html">oui</a></li>
     <li><a href ="https://www.google.fr/">Non</a><li>
     </ul>
    `;
