@@ -43,18 +43,18 @@ h1{
   font-size: 1.5rem;
   text-align: center;
   margin-top: 20px;
-  color: blue;
+  color: black;
 }
 h2{
   font-size: 1rem;
   text-align: center;
   margin-top: 20px;
-  color: aqua;
+  color: black;
 }
 .chrono{
   font-size: 5rem;
   
-  color: black;
+  color: gray;
   
   text-align: center;
 }
@@ -92,4 +92,8 @@ ul{
 li{
   list-style-type: none;
   margin-right: 20px;
+}
+.wait{
+  text-align: center;
+  width: 12rem;
 }

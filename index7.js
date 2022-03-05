@@ -22,12 +22,12 @@ function clickOnBallon(bubble) {
     counter++;
     counterDisplay.textContent = counter;
 
-    if (counter >= 10) { // Le chiffre de ballon a atteindre doit être dans une constante au dessus
+    if (counter >= 20) { // Le chiffre de ballon a atteindre doit être dans une constante au dessus
       gameOver = true;
       text.innerHTML = `
       <h3>Gagné</h3>
       <ul>
-      <li><a href="./index.html"niveau 8 bientôt disponible</a></li>
+      <li><a  class ="wait"href="./index.html">niveau 8 bientôt disponible</a></li>
       <li><a href ="https://www.google.fr/">quitter</a><li>
       </ul>
      `;
@@ -83,7 +83,7 @@ const bubbleMaker = () => {
 
   setTimeout(() => {
     bubble.remove();
-  },8000);
+  },6000);
 };
 
 
@@ -108,7 +108,7 @@ let gameLost = function () { // renommer la fonction
     <h3>Game Over</h3>
     <p>Rejouer</p>
     <ul>
-    <li><a href="./index.html">oui</a></li>
+    <li><a href="./index7.html">oui</a></li>
     <li><a href ="https://www.google.fr/">Non</a><li>
     </ul>
    `
@@ -120,7 +120,7 @@ let gameLost = function () { // renommer la fonction
 
 
 let decrement = function () {
-  for (let i = 80; i > -1; i--) {
+  for (let i = 60; i > -1; i--) {
     setTimeout((function (s) {
       return function () {
         decompte(s);

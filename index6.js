@@ -106,7 +106,7 @@ let gameLost = function () { // renommer la fonction
     <h3>Game Over</h3>
     <p>Rejouer</p>
     <ul>
-    <li><a href="./index.html">oui</a></li>
+    <li><a href="./index6.html">oui</a></li>
     <li><a href ="https://www.google.fr/">Non</a><li>
     </ul>
    `
